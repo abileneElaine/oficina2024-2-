@@ -11,11 +11,13 @@ public class NewBehaviourScript : MonoBehaviour
     public bool doubleJump;
 
     private Rigidbody2D rig;
+    private Animator anin;
 
     // Start is called before the first frame update
     void Start()
     {
        rig = GetComponent<Rigidbody2D>();
+       anin = GetComponent<Animator>();
 
     }
 
@@ -30,6 +32,25 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
         transform.position += movement * Time.deltaTime * Speed;
+        
+        if(Input.GetAxis("Horizontal") > 0f)
+        {
+        anin.SetBool("walk", true);  
+        transform.localEulerAngles = new Vector3(0f, 0f, 0f);
+        }
+
+        if(Input.GetAxis("Horizontal") < 0f)
+        {
+        anin.SetBool("walk", true); 
+        transform.localEulerAngles = new Vector3(0f, 180f, 0f);
+   
+        }
+
+        if(Input.GetAxis("Horizontal") == 0f)
+        {
+        anin.SetBool("walk",false);    
+        }
+        
     }
 
     void Jump()
@@ -40,6 +61,7 @@ public class NewBehaviourScript : MonoBehaviour
             {
               rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
               doubleJump = true; 
+              anin.SetBool("jump", true);
             }
             else
             {
@@ -59,6 +81,7 @@ public class NewBehaviourScript : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
            isJumping = false;
+           anin.SetBool("jump", false);
         }
     }
 
