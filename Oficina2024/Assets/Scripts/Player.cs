@@ -86,7 +86,8 @@ public class NewBehaviourScript : MonoBehaviour
 
         if(collision.gameObject.tag == "Spikes")
         {
-           Debug.Log("Tocou o espinho!");
+           GameController.instance.ShowGameOver();
+           Destroy(gameObject);
         }
     }
 
