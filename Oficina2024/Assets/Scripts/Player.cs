@@ -84,7 +84,7 @@ public class NewBehaviourScript : MonoBehaviour
            anin.SetBool("jump", false);
         }
 
-        if(collision.gameObject.tag == "Spike")
+        if(collision.gameObject.tag == "Spikes")
         {
            Debug.Log("Tocou o espinho!");
         }
