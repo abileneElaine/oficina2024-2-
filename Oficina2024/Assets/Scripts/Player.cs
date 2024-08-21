@@ -83,6 +83,11 @@ public class NewBehaviourScript : MonoBehaviour
            isJumping = false;
            anin.SetBool("jump", false);
         }
+
+        if(collision.gameObject.tag == "Spike")
+        {
+           Debug.Log("Tocou o espinho!");
+        }
     }
 
    void OnCollisionExit2D(Collision2D collision)
