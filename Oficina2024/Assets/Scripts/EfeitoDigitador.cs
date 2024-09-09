@@ -28,10 +28,9 @@ public class EfeitoDigitador : MonoBehaviour
     }
     private void OnDisable()
     {
-      componenteTexto = mensagemOriginal;
+      componenteTexto.text = mensagemOriginal;
+      StopAllCoroutines();
     }
-
-    
     public void ImprimirMensagem(string mensagem)
     {
         if (gameObject.activeInHierarchy)
