@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class CarregarCena : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public string cenaParaCarregar;
     void Start()
     {
-        
+        SceneManager.LoadScene(cenaParaCarregar);
     }
 
     // Update is called once per frame

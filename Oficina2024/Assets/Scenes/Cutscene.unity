@@ -684,6 +684,7 @@ RectTransform:
   - {fileID: 1336628552}
   - {fileID: 1725182590}
   - {fileID: 1901498525}
+  - {fileID: 1605820741}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -722,6 +723,10 @@ PlayableDirector:
     value: {fileID: 1336628549}
   - key: {fileID: -3475513965128941167, guid: 3a67ca9dc66a77141bd5c6b116e2f2cf, type: 2}
     value: {fileID: 1725182585}
+  - key: {fileID: -5007236231945544625, guid: 3a67ca9dc66a77141bd5c6b116e2f2cf, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -3641373419206716884, guid: 3a67ca9dc66a77141bd5c6b116e2f2cf, type: 2}
+    value: {fileID: 1605820740}
   m_ExposedReferences:
     m_References:
     - 8f14722290ab33148a4e06dd2cf865c7: {fileID: 1901498524}
@@ -950,6 +955,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389581714}
   m_CullTransparentMesh: 1
+--- !u!1 &1605820740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1605820741}
+  - component: {fileID: 1605820742}
+  m_Layer: 0
+  m_Name: LOAD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1605820741
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605820740}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -27.244957, y: -8.114427, z: -1484.1951}
+  m_LocalScale: {x: 16.482155, y: 16.482155, z: 16.482155}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 897264044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1605820742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1605820740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4cc828fa23d3d49a45b20075a58cc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cenaParaCarregar: Cutscene
 --- !u!1 &1725182585
 GameObject:
   m_ObjectHideFlags: 0
